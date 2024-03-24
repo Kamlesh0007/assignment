@@ -262,6 +262,9 @@
 	border: none;
 }
 
+.simple-menu .dropdown .dropdown-menu.show{
+  display:block !important;
+}
 .simple-menu .dropdown .dropdown-menu a {
 	top: 0;
 	font-size: 20px;
