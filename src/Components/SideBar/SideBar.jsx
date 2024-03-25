@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, NavLink,useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo-icon.png";
 import menu from "../../assets/img/menu-white.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,7 @@ const SideNavbar = ({
   isDefaultHome,
   setIsDefaultHome, aboutRef
 }) => {
+  const location = useLocation();
   const navRef = useRef(null);
   const [showIcons, setShowIcons] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -47,11 +48,17 @@ const SideNavbar = ({
     ) {
       scrollToSection(id);
       console.log("section moved");
-    } else if (page === "/" ||page === "/HomeOnepage" || page === "/HomeOnpageLight") {
+    } 
+   
+  };
+
+  useEffect(()=>{
+    if (page === "/" ||page === "/HomeOnepage" || page === "/HomeOnpageLight") {
       localStorage.setItem("defaulthome", true);
       setIsDefaultHome(true);
     }else if (page === "/HomeLight2" ||page === "/HomeOnepage2" ) {
       localStorage.setItem("defaulthome", false);
+      console.log("index-2");
       setIsDefaultHome(false);
     }
 
@@ -69,9 +76,7 @@ const SideNavbar = ({
           setIsDefaultHome(true);
         }
       });
-   
-  };
-
+  },[location.pathname])
   const scrollToTop = () => {
       // Scroll to the top of the page
       window.scrollTo({
