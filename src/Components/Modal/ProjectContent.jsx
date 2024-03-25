@@ -1,7 +1,7 @@
 import React from "react";
-import projectImage1 from "../../assets/img/1500x800.png";
-import projectImage2 from "../../assets/img/600x800.png";
-import projectImage3 from "../../assets/img/800x600.png";
+import projectImage1 from "/assets/img/1500x800.png";
+import projectImage2 from "/assets/img/600x800.png";
+import projectImage3 from "/assets/img/800x600.png";
 
 const ProjectContent = () => {
   return (

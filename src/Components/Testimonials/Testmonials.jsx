@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 
-import image1 from "../../assets/img/800x800.png";
-import image2 from "../../assets/img/brand/1.png";
-import image3 from "../../assets/img/brand/2.png";
-import image4 from "../../assets/img/brand/4.png";
-import image5 from "../../assets/img/brand/5.png";
-import image6 from "../../assets/img/brand/3.png";
+import image1 from "/assets/img/800x800.png";
+import image2 from "/assets/img/brand/1.png";
+import image3 from "/assets/img/brand/2.png";
+import image4 from "/assets/img/brand/4.png";
+import image5 from "/assets/img/brand/5.png";
+import image6 from "/assets/img/brand/3.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";

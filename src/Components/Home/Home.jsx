@@ -2,10 +2,10 @@ import React from "react";
 import SideNavbar from "../SideBar/SideBar";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
-import harndImage from "../../assets/img/shape/harnd.png";
-import figmaIcon from "../../assets/img/icon/figma.png";
-import wordpressIcon from "../../assets/img/icon/wordpress.png";
-import laptopImage from "../../assets/img/shape/laptop.png";
+import harndImage from "/assets/img/shape/harnd.png";
+import figmaIcon from "/assets/img/icon/figma.png";
+import wordpressIcon from "/assets/img/icon/wordpress.png";
+import laptopImage from "/assets/img/shape/laptop.png";
 
 const Home = ({ data }) => {
   return (

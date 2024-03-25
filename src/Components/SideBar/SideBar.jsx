@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink,useLocation } from "react-router-dom";
-import logo from "../../assets/img/logo-icon.png";
-import menu from "../../assets/img/menu-white.svg";
+import logo from "/assets/img/logo-icon.png";
+import menu from "/assets/img/menu-white.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 

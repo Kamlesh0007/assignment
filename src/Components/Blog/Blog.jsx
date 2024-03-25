@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Blog.css";
-import imagurl from "../../assets/img/800x600.png";
+import imagurl from "/assets/img/800x600.png";
 
 const Blog = () => {
   const blogPosts = [

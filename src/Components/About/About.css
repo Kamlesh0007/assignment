@@ -44,7 +44,7 @@
   padding: 50px;
   margin-top: 40px;
   border-radius: 10px;
-  background-image: url(../../assets/img/shape/overlay-bg.png);
+  background-image: url(/assets/img/shape/overlay-bg.png);
   background-size: cover;
   background-position: center;
   box-shadow: none;

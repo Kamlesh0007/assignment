@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import image1 from "../../assets/img/1500x800.png";
-import icon1 from "../../assets/img/icon/1.png";
-import icon2 from "../../assets/img/icon/2.png";
+import image1 from "/assets/img/1500x800.png";
+import icon1 from "/assets/img/icon/1.png";
+import icon2 from "/assets/img/icon/2.png";
 import {
   faChevronDown,
   faChevronUp,

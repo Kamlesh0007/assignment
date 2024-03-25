@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
-import profileImage from "../../assets/img/illustration/5.png";
-import bgImage from "../../assets/img/shape/8.png";
+import profileImage from "/assets/img/illustration/5.png";
+import bgImage from "/assets/img/shape/8.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import hand from "../../assets/img/shape/harnd.png";
+import hand from "/assets/img/shape/harnd.png";
 import {
   faFacebookF,
   faBehance,
