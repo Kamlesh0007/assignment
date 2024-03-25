@@ -185,7 +185,7 @@ if(isDarkMode!=storedDarkMode){
                   isDefaultHome={isDefaultHome}
                   setIsDefaultHome={setIsDefaultHome}
                 />
-                <Header />
+                <Header                   isDarkMode={isDarkMode}/>
                 <Routes>
                   <Route
                     path="/"

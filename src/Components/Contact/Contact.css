@@ -179,3 +179,9 @@ p.copyright {
 	color: var(--white);
 }
 
+@media (max-width: 767px)
+{
+	.contact-area.contact-page .contact-address{
+		padding-left: 0px;
+	}
+}

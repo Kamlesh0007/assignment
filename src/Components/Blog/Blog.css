@@ -153,3 +153,8 @@
   color: var(--black);
 }
 
+@media (max-width: 767px) {
+  .home-blog .blog-style-one .item .info ul{
+    padding-left: 0px;
+  }
+}
