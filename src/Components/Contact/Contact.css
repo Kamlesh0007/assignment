@@ -163,7 +163,7 @@ a{
 color: red;
 }
 .contact-area.contact-page {
-	background:url(../../assets/img/shape/map-light.png);
+	background:url(/assets/img/shape/map-light.png);
 	background-size: 60%;
 	background-repeat: no-repeat;
 	background-position: center;

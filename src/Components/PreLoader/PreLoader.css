@@ -35,14 +35,14 @@
     content: "";
     height: 100%;
     width: 100%;
-    background: url('../../assets/img/preloader-icon.png');
+    background: url('/assets/img/preloader-icon.png');
     transform: translate(-50%, -50%);
     background-repeat:  no-repeat;
     background-position: center;
 }
 
 .bg-dark .ventix-preloader .animation-preloader::after {
-    background: url('../../assets/img/preloader-icon-light.png');
+    background: url('/assets/img/preloader-icon-light.png');
     background-repeat:  no-repeat;
     background-position: center;
 }
