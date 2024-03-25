@@ -99,7 +99,7 @@ const ServiceSlider = () => {
     {
       text: "Website design",
       icon: "D",
-      bgImage: url("/assets/img/800x800.png"),
+      bgImage: 'url("/assets/img/800x800.png")',
       description:
         "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
       services: [
@@ -111,7 +111,7 @@ const ServiceSlider = () => {
     {
       text: "Graphics design",
       icon: "U",
-      bgImage: url("/assets/img/800x800.png"),
+      bgImage: 'url("/assets/img/800x800.png")',
       description:
         "Technical diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
       services: [
