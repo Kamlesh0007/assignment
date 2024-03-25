@@ -36,27 +36,27 @@ const ExpertiseItem = ({ iconSrc, title, initialValue }) => {
 const ExpertiseSection = () => {
   const expertiseItems = [
     {
-      iconSrc: "./src/assets/img/icon/figma.png",
+      iconSrc: "/src/assets/img/icon/figma.png",
       title: "UI / UX Design",
       initialValue: 90,
     },
     {
-      iconSrc: "./src/assets/img/icon/wordpress.png",
+      iconSrc: "/src/assets/img/icon/wordpress.png",
       title: "WordPress",
       initialValue: 87,
     },
     {
-      iconSrc: "./src/assets/img/icon/react.png",
+      iconSrc: "/src/assets/img/icon/react.png",
       title: "React JS",
       initialValue: 76,
     },
     {
-      iconSrc: "./src/assets/img/icon/python.png",
+      iconSrc: "/src/assets/img/icon/python.png",
       title: "Python",
       initialValue: 95,
     },
     {
-      iconSrc: "./src/assets/img/icon/ruby.png",
+      iconSrc: "/src/assets/img/icon/ruby.png",
       title: "Ruby",
       initialValue: 78,
     },
@@ -99,7 +99,7 @@ const ServiceSlider = () => {
     {
       text: "Website design",
       icon: "D",
-      bgImage: 'url("/assets/img/800x800.png")',
+      bgImage: 'url("/src/assets/img/800x800.png")',
       description:
         "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
       services: [
@@ -111,7 +111,7 @@ const ServiceSlider = () => {
     {
       text: "Graphics design",
       icon: "U",
-      bgImage: 'url("/assets/img/800x800.png")',
+      bgImage: 'url("/src/assets/img/800x800.png")',
       description:
         "Technical diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
       services: [
