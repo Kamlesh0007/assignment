@@ -72,6 +72,15 @@ const SideNavbar = ({
    
   };
 
+  const scrollToTop = () => {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  
+
 
   return (
     <div className="side-navbar-items">
@@ -80,6 +89,8 @@ const SideNavbar = ({
           <div className="side-nav-menu">
             <Link
               to={
+                page === "/HomeOnepage2"
+                ? "/HomeOnepage2":
                 page === "/HomeLight2"
                   ? "/HomeLight2"
                   : page === "/HomeOnepage"
@@ -93,7 +104,7 @@ const SideNavbar = ({
                         ? "/"
                         : "/HomeLight"
               }
-              onClick={window.scrollTo(0, 0)}
+              onClick={()=>{scrollToTop()}}
               className="smooth-menu"
             >
               <img src={logo} alt="Logo" />
@@ -151,10 +162,12 @@ const SideNavbar = ({
                 className={` smooth-menu home ${isClicked ? "clicked " : ""}`}
                 onClick={() => {
                   handleLinkClick();
-
-                  window.scrollTo(0, 0);
+scrollToTop();
+           
                 }}
                 to={
+                  page === "/HomeOnepage2"
+                  ? "/HomeOnepage2":
                   page === "/HomeLight2"
                     ? "/HomeLight2"
                     : page === "/HomeOnepage"
