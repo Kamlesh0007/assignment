@@ -7,7 +7,16 @@ import figmaIcon from "/assets/img/icon/figma.png";
 import wordpressIcon from "/assets/img/icon/wordpress.png";
 import laptopImage from "/assets/img/shape/laptop.png";
 
-const Home = ({ data }) => {
+const Home = ({ data,page,     scrollToSection }) => {
+  const handleClick = (id) => {
+    if (
+      page === "/HomeOnepage" ||
+      page === "/HomeOnpageLight" ||
+      page === "/HomeOnpage2"
+    ) {
+      scrollToSection(id);
+    }
+  };
   return (
     <>
       <div className="banner-style-one-area default-padding">
@@ -33,7 +42,7 @@ const Home = ({ data }) => {
                   <div className="profile-grid">
                     <ul>
                       <li>
-                        <Link to="/services" className="smooth-menu">
+                        <Link onClick={()=>handleClick("services")} to={page === "/HomeOnepage" || page === "/HomeOnpageLight" || page === "/HomeOnepage2" ? "" : "/services"}  className="smooth-menu">
                           Services
                           <div className="icon-list">
                             <img src={figmaIcon} alt="Image not Found" />
@@ -42,13 +51,13 @@ const Home = ({ data }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/projects" className="smooth-menu">
+                        <Link onClick={()=>handleClick("projects")}  to={page === "/HomeOnepage" || page === "/HomeOnpageLight" || page === "/HomeOnepage2" ? "" : "/projects"} className="smooth-menu">
                           Projects
                           <img src={laptopImage} alt="Image Not Found" />
                         </Link>
                       </li>
                       <li>
-                        <Link to="/about" className="smooth-menu">
+                        <Link onClick={()=>handleClick("about")} to={page === "/HomeOnepage" || page === "/HomeOnpageLight" || page === "/HomeOnepage2" ? "" : "/about"}  className="smooth-menu">
                           About
                           <strong>A</strong>
                         </Link>

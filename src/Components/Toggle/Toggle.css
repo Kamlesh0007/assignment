@@ -1,0 +1,30 @@
+.toogle-container{
+    position: fixed;
+top: 0;
+    right: 0;
+
+z-index: 999;
+    padding: 20px; 
+}
+
+.toogle{
+
+    display: flex;
+    justify-content: flex-end;
+    border: 3px solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+.toogle>*{
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-primary);
+}
+.t-button{
+    border-radius: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+}

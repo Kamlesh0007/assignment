@@ -14,12 +14,12 @@ const HomeOnepage = ({
   DefaultHome,
   isOpen,
   setIsOpen,
-  setActiveModalContent
+  setActiveModalContent,page
 }) => {
   return (
     <>
       <ConditionalWrapper condition={condition}>
-      {DefaultHome?  <Home data={data} />:<Home2 />}
+      {DefaultHome?  <Home data={data}  page={page}      scrollToSection={scrollToSection} />:<Home2  page={page}      scrollToSection={scrollToSection}/>}
       </ConditionalWrapper>
       <ConditionalWrapper condition={condition}>
         <Services

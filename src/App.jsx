@@ -15,6 +15,7 @@ import HomeOnepage from "./Components/Pages/HomeOnepage";
 import ConditionalWrapper from "./Components/ConditionalWrapper/ConditionalWrapper";
 import Home2 from "./Components/Home/Home2";
 import Modal from "./Components/Modal/Modal";
+import Toggle from "./Components/Toggle/Toggle";
 
 function App() {
   const [data, setData] = useState(null);
@@ -142,13 +143,13 @@ function App() {
     if (isDarkModeEnabled) {
       document.body.classList.add("bg-dark", "home-vcard", "bg-fixed");
       document.body.style.backgroundImage =
-        "url(/src/assets/img/shape/banner-1.png)";
+        "url(/assets/img/shape/banner-1.png)";
     } else {
       document.body.classList.remove("bg-dark", "home-vcard", "bg-fixed");
       document.body.classList.add( "home-vcard", "bg-fixed");
 
       document.body.style.backgroundImage =
-        "url(/src/assets/img/shape/banner.jpg)";
+        "url(/assets/img/shape/banner.jpg)";
     }
   };
   
@@ -174,6 +175,7 @@ if(isDarkMode!=storedDarkMode){
           <div className="main-wrapper">
             <div className="main-content-area">
               <>
+              <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
                 <SideNavbar
                   data={data}
                   page={pathname}
@@ -191,7 +193,7 @@ if(isDarkMode!=storedDarkMode){
                       <ConditionalWrapper
                         condition={location.pathname === "/HomeOnepage"}
                       >
-                        <Home data={data} />
+                        <Home data={data}  page={pathname}      scrollToSection={scrollToSection}/>
                       </ConditionalWrapper>
                     }
                   />
@@ -268,6 +270,7 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
+                        page={pathname}      
                       />
                     }
                   />
@@ -282,6 +285,7 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
+                        page={pathname}      
                       />
                     }
                   />
@@ -292,7 +296,7 @@ if(isDarkMode!=storedDarkMode){
                         condition={location.pathname === "/HomeOnepage"}
                         
                       >
-                        <Home data={data} />
+                        <Home data={data}  page={pathname}      scrollToSection={scrollToSection}/>
                       </ConditionalWrapper>
                     }
                   />
@@ -303,7 +307,7 @@ if(isDarkMode!=storedDarkMode){
                         condition={location.pathname === "/HomeOnepage"}
                         
                       >
-                        <Home2 data={data} />
+                        <Home2 data={data}  page={pathname}       scrollToSection={scrollToSection}/>
                       </ConditionalWrapper>
                     }
                   />
@@ -318,6 +322,7 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setActiveModalContent={setActiveModalContent}
                         setIsOpen={setIsOpen}
+                        page={pathname}      
                       />
                     }
                   />
@@ -327,7 +332,7 @@ if(isDarkMode!=storedDarkMode){
                       <ConditionalWrapper
                         condition={location.pathname === "/Home2Onepage"}
                       >
-                        <Home2 data={data} />
+                        <Home2 data={data}  page={pathname}       scrollToSection={scrollToSection}/>
                       </ConditionalWrapper>
                     }
                   />
