@@ -96,7 +96,7 @@ const Brand = () => {
                       <img src={image6} alt="Thumb" />
                     </SwiperSlide>
                   </Swiper>
-                  s
+                  
                 </div>
               </div>
             </div>
