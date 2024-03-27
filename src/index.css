@@ -13616,7 +13616,7 @@ Version: 1.0
   }
 
   .pr-xs-15 {
-    padding-right: 15px !important;
+    padding-right: 15px;
   }
 
   .pr-xs-20 {

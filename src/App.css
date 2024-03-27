@@ -2465,7 +2465,6 @@ ul.achivement li i.fa-html5 {
     grid-template-columns: 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    padding-left: 0px;
   }
 
   .banner-style-one-area .thumb::before,
@@ -2628,14 +2627,14 @@ ul.achivement li i.fa-html5 {
 
   .portfolio-style-one,
   .bg-dark .portfolio-style-one {
-    padding: 0 !important;
+    padding: 0;
   }
 
   .pf-item-info {
     position: inherit;
     right: auto !important;
     left: 0 !important;
-    padding: 0 !important;
+    padding: 0;
     bottom: auto;
     text-align: left;
     margin-top: 30px;
@@ -2758,8 +2757,8 @@ ul.achivement li i.fa-html5 {
   }
 
   ul.biography-table {
-    grid-template-columns: 1fr !important;
-    grid-row-gap: 20px !important;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
   }
 
   .about-item {
@@ -3581,8 +3580,8 @@ ul.achivement li i.fa-html5 {
 
 
   .title {
-    font-size: 36px !important;
-    line-height: 1.2 !important;
+    font-size: 36px;
+    line-height: 1.2;
   }
 
   .heading-left,
@@ -3707,7 +3706,7 @@ ul.achivement li i.fa-html5 {
   /* Services */
   .service-style-one-item,
   .bg-dark .service-style-one-item {
-    display: block !important;
+    display: block;
   }
 
   .service-style-one-item.button a {
@@ -3728,7 +3727,7 @@ ul.achivement li i.fa-html5 {
   }
 
   .testimonial-style-one-box {
-    padding: 60px 40px !important;
+    padding: 60px 40px;
   }
 
   /* Expertise Area */
@@ -3778,13 +3777,13 @@ ul.achivement li i.fa-html5 {
   }
 
   .pf-item-info {
-    position: inherit !important;
+    position: inherit;
     right: auto !important;
     left: 0 !important;
     padding: 0;
-    bottom: auto !important;
-    text-align: left !important;
-    margin-top: 30px !important;
+    bottom: auto;
+    text-align: left;
+    margin-top: 30px;
   }
 
   .pf-item-info h2 {
@@ -3809,7 +3808,7 @@ ul.achivement li i.fa-html5 {
   }
 
   .testimonial-style-one p {
-    font-size: 18px !important;
+    font-size: 18px;
   }
 
   /* Contact */
@@ -3830,7 +3829,7 @@ ul.achivement li i.fa-html5 {
 
   .brand-heading h3,
   .bg-dark .brand-heading h3 {
-    background: transparent !important;
+    background: transparent;
   }
 
   .brand-heading::after,

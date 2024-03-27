@@ -3,7 +3,13 @@ import ProjectItems from "./ProjectItems";
 import "./Projects.css";
 import TestimonialSection from "../Testimonials/Testmonials";
 
-const Projects = ({ data, isOpen, setIsOpen,setActiveModalContent }) => {
+const Projects = ({
+  data,
+  isOpen,
+  setIsOpen,
+  setActiveModalContent,
+  setSequence,
+}) => {
   return (
     <>
       <div className="project-style-one-area default-padding" id="projects">
@@ -24,12 +30,15 @@ const Projects = ({ data, isOpen, setIsOpen,setActiveModalContent }) => {
               data.projects.map((project, index) => (
                 <ProjectItems
                   key={index}
-                  category={project.techStack[0]}
+                  category={project.techStack[index % 4]}
                   title={project.title}
                   imageSrc={project.image.url}
                   isOpen={isOpen}
                   setIsOpen={setIsOpen}
                   setActiveModalContent={setActiveModalContent}
+                  data={data.projects}
+                  setSequence={setSequence}
+                  sequence={project.sequence}
                 />
               ))}
           </div>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ServiceContent from "./ServiceContent";
 import "./Modal.css";
 import ProjectContent from "./ProjectContent";
-const Modal = ({ isOpen, handleClose, modalContent }) => {
+const Modal = ({ isOpen, handleClose, modalContent, sequence, data }) => {
   return (
     <>
       {isOpen && (
@@ -26,7 +26,9 @@ const Modal = ({ isOpen, handleClose, modalContent }) => {
                   ></FontAwesomeIcon>
                 </div>
                 {modalContent === "service" && <ServiceContent />}
-                {modalContent === "project" && <ProjectContent />}
+                {modalContent === "project" && (
+                  <ProjectContent sequence={sequence} data={data} />
+                )}
               </div>
             </div>
           </div>

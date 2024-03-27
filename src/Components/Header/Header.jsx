@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logoLight from "/assets/img/logo-light.png";
-import logodark from "/assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-function Header({isDarkMode}) {
+function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -31,7 +30,7 @@ function Header({isDarkMode}) {
               <FontAwesomeIcon icon={faBars} className="fa-light" />
             </button>
             <Link to="/" className="navbar-brand">
-              {isDarkMode?<img src={logoLight} className="logo" alt="Logo" />:<img src={logodark} className="logo" alt="Logo" />}
+              <img src={logoLight} className="logo" alt="Logo" />
             </Link>
           </div>
           {/* End Header Navigation */}
@@ -42,7 +41,7 @@ function Header({isDarkMode}) {
             }`}
             id="navbar-menu"
           >
-  {isDarkMode?<img src={logoLight} className="logo" alt="Logo" />:<img src={logodark} className="logo" alt="Logo" />}
+            <img src={logoLight} alt="Logo" />
             <button
               type="button"
               className="navbar-toggle"

@@ -61,14 +61,13 @@ const Brand = () => {
                 <div className="swiper-wrapper align-center">
                   <Swiper
                     modules={[Autoplay]}
-                    spaceBetween={20}
+                    slidesPerView={5}
+                    spaceBetween={30}
                     loop={true}
-                    slidesPerView={2}
-
                     breakpoints={{
                       768: {
                         slidesPerView: 3,
-                        spaceBetween: 30,
+                        spaceBetween: 40,
                       },
                       992: {
                         slidesPerView: 4,
@@ -97,7 +96,7 @@ const Brand = () => {
                       <img src={image6} alt="Thumb" />
                     </SwiperSlide>
                   </Swiper>
-                  
+                  s
                 </div>
               </div>
             </div>

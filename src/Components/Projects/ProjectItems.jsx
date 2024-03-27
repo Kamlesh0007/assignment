@@ -9,6 +9,9 @@ const ProjectItems = ({
   isOpen,
   setIsOpen,
   setActiveModalContent,
+  data,
+  sequence,
+  setSequence,
 }) => {
   return (
     <div className="col-lg-6 item-center">
@@ -25,6 +28,7 @@ const ProjectItems = ({
                 console.log("hitted");
                 setIsOpen(!isOpen);
                 setActiveModalContent("project");
+                setSequence(sequence);
               }}
             >
               <Link to={link}>{title}</Link>

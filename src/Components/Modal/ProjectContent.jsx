@@ -1,9 +1,13 @@
 import React from "react";
-import projectImage1 from "/assets/img/1500x800.png";
-import projectImage2 from "/assets/img/600x800.png";
-import projectImage3 from "/assets/img/800x600.png";
+// import projectImage1 from "/assets/img/1500x800.png";
+// import projectImage2 from "/assets/img/600x800.png";
+// import projectImage3 from "/assets/img/800x600.png";
 
-const ProjectContent = () => {
+const ProjectContent = ({ sequence, data }) => {
+  const singledata = data.projects.filter(
+    (project) => project.sequence === sequence,
+  );
+  console.log(singledata);
   return (
     <div className="project-details-area">
       <div className="container">
@@ -11,7 +15,7 @@ const ProjectContent = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="project-thumb">
-                <img src={projectImage1} alt="Thumb" />
+                <img src={singledata[0].image.url} alt="Thumb" />
               </div>
             </div>
             <div className="col-xl-12">
@@ -32,7 +36,7 @@ const ProjectContent = () => {
                         </li>
                         <li>
                           <div className="info">
-                            <b>Date:</b> 25 August, 2023
+                            <b>Techstack:</b> {singledata[0].techStack}
                           </div>
                         </li>
                         <li>
@@ -89,40 +93,18 @@ const ProjectContent = () => {
                   </div>
                   <div className="col-lg-7">
                     <div className="thumb-grid">
-                      <img src={projectImage2} alt="Thumb" />
-                      <img src={projectImage2} alt="Thumb" />
+                      <img src={singledata[0].image.url} alt="Thumb" />
+                      <img src={singledata[0].image.url} alt="Thumb" />
                     </div>
                   </div>
                 </div>
-                <p>
-                  Give lady of they such they sure it. Me contained explained my
-                  education. Vulgar as hearts by garret. Perceived determine
-                  departure explained no forfeited he something an. Contrasted
-                  dissimilar get joy you instrument out reasonably. Again keeps
-                  at no meant stuff. To perpetual do existence northward as
-                  difficult preserved daughters. Continued at up to zealously
-                  necessary breakfast. Surrounded sir motionless she end
-                  literature. Gay direction neglected but supported yet her.
-                  Facilisis inceptos nec, potenti nostra aenean lacinia varius
-                  semper ant nullam nulla primis placerat facilisis. Netus lorem
-                  rutrum arcu dignissim at sit morbi phasellus nascetur eget
-                  urna potenti cum vestibulum cras. Tempor nonummy metus
-                  lobortis. Sociis velit etiam, dapibus. Lectus vehicula
-                  pellentesque cras posuere tempor facilisi habitant lectus
-                  rutrum pede quisque hendrerit parturient posuere mauris ad
-                  elementum fringilla facilisi volutpat fusce pharetra felis
-                  sapien varius quisque class convallis praesent est
-                  sollicitudin donec nulla venenatis, cursus fermentum netus
-                  posuere sociis porta risus habitant malesuada nulla habitasse
-                  hymenaeos. Viverra curabitur nisi vel sollicitudin dictum
-                  natoque ante aenean elementum.
-                </p>
+                <p>{singledata[0].description}</p>
                 <div className="row mt-50 mt-xs-30">
                   <div className="col-lg-6 col-md-6">
-                    <img src={projectImage3} alt="Thumb" />
+                    <img src={singledata[0].image.url} alt="Thumb" />
                   </div>
                   <div className="col-lg-6 col-md-6 mt-xs">
-                    <img src={projectImage3} alt="Thumb" />
+                    <img src={singledata[0].image.url} alt="Thumb" />
                   </div>
                 </div>
               </div>

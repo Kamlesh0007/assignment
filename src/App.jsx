@@ -27,6 +27,8 @@ function App() {
 
   const [activeModalContent, setActiveModalContent] = useState(null);
 
+  const [activeModalsequence, setActiveModalsequence] = useState(null);
+
   const handleClose = () => {
     setIsOpen(!isOpen);
   };
@@ -91,7 +93,7 @@ function App() {
     console.log(ref);
     const section = document.getElementById(ref);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start"});
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
   // useEffect(() => {
@@ -110,33 +112,27 @@ function App() {
 
   //     document.body.style.backgroundImage =
   //       "url(/src/assets/img/shape/banner-1.png)";
-  //   }    
+  //   }
 
-    
-   
   // }, []);
-      // Retrieve dark mode setting from localStorage
-      const storedDarkMode = localStorage.getItem("darkMode");
+  // Retrieve dark mode setting from localStorage
+  const storedDarkMode = localStorage.getItem("darkMode");
   useEffect(() => {
-
-    
     // Check if stored value is not null or undefined
     if (storedDarkMode !== null && storedDarkMode !== undefined) {
       // Convert the stored value to a boolean
-    
+
       const isDarkModeEnabled = storedDarkMode === "true";
-      console.log(storedDarkMode,isDarkModeEnabled);
+      console.log(storedDarkMode, isDarkModeEnabled);
       setIsDarkMode(isDarkModeEnabled);
-    
     } else {
       // If no value found in localStorage, set default value to true
       setIsDarkMode(true);
       // Store the default dark mode setting in localStorage
       localStorage.setItem("darkMode", true);
-   
     }
   }, []);
-  
+
   // Apply dark mode settings to the body
   const applyDarkMode = (isDarkModeEnabled) => {
     console.log(isDarkModeEnabled);
@@ -146,25 +142,20 @@ function App() {
         "url(/assets/img/shape/banner-1.png)";
     } else {
       document.body.classList.remove("bg-dark", "home-vcard", "bg-fixed");
-      document.body.classList.add( "home-vcard", "bg-fixed");
+      document.body.classList.add("home-vcard", "bg-fixed");
 
-      document.body.style.backgroundImage =
-        "url(/assets/img/shape/banner.jpg)";
+      document.body.style.backgroundImage = "url(/assets/img/shape/banner.jpg)";
     }
   };
-  
+
   // Update dark mode setting in localStorage whenever it changes
   useEffect(() => {
-
-console.log("darkmode changes"+isDarkMode,storedDarkMode);
-if(isDarkMode!=storedDarkMode){
-    localStorage.setItem("darkMode", isDarkMode);
-    applyDarkMode(isDarkMode);
-}
+    console.log("darkmode changes" + isDarkMode, storedDarkMode);
+    if (isDarkMode != storedDarkMode) {
+      localStorage.setItem("darkMode", isDarkMode);
+      applyDarkMode(isDarkMode);
+    }
   }, [isDarkMode]);
-  
-
-
 
   return (
     <>
@@ -175,7 +166,7 @@ if(isDarkMode!=storedDarkMode){
           <div className="main-wrapper">
             <div className="main-content-area">
               <>
-              <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+                <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
                 <SideNavbar
                   data={data}
                   page={pathname}
@@ -185,7 +176,7 @@ if(isDarkMode!=storedDarkMode){
                   isDefaultHome={isDefaultHome}
                   setIsDefaultHome={setIsDefaultHome}
                 />
-                <Header                   isDarkMode={isDarkMode}/>
+                <Header />
                 <Routes>
                   <Route
                     path="/"
@@ -193,7 +184,11 @@ if(isDarkMode!=storedDarkMode){
                       <ConditionalWrapper
                         condition={location.pathname === "/HomeOnepage"}
                       >
-                        <Home data={data}  page={pathname}      scrollToSection={scrollToSection}/>
+                        <Home
+                          data={data}
+                          page={pathname}
+                          scrollToSection={scrollToSection}
+                        />
                       </ConditionalWrapper>
                     }
                   />
@@ -219,6 +214,7 @@ if(isDarkMode!=storedDarkMode){
                           isOpen={isOpen}
                           setIsOpen={setIsOpen}
                           setActiveModalContent={setActiveModalContent}
+                          setSequence={setActiveModalsequence}
                         />
                       </ConditionalWrapper>
                     }
@@ -244,7 +240,7 @@ if(isDarkMode!=storedDarkMode){
                           isOpen={isOpen}
                           setIsOpen={setIsOpen}
                           setActiveModalContent={setActiveModalContent}
-                          DefaultHome={isDefaultHome} 
+                          DefaultHome={isDefaultHome}
                         />
                       </ConditionalWrapper>
                     }
@@ -270,11 +266,11 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
-                        page={pathname}      
+                        page={pathname}
                       />
                     }
                   />
-                             <Route
+                  <Route
                     path="/HomeOnepage2"
                     element={
                       <HomeOnepage
@@ -285,7 +281,7 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
-                        page={pathname}      
+                        page={pathname}
                       />
                     }
                   />
@@ -294,20 +290,26 @@ if(isDarkMode!=storedDarkMode){
                     element={
                       <ConditionalWrapper
                         condition={location.pathname === "/HomeOnepage"}
-                        
                       >
-                        <Home data={data}  page={pathname}      scrollToSection={scrollToSection}/>
+                        <Home
+                          data={data}
+                          page={pathname}
+                          scrollToSection={scrollToSection}
+                        />
                       </ConditionalWrapper>
                     }
                   />
-                    <Route
+                  <Route
                     path="/HomeLight2"
                     element={
                       <ConditionalWrapper
                         condition={location.pathname === "/HomeOnepage"}
-                        
                       >
-                        <Home2 data={data}  page={pathname}       scrollToSection={scrollToSection}/>
+                        <Home2
+                          data={data}
+                          page={pathname}
+                          scrollToSection={scrollToSection}
+                        />
                       </ConditionalWrapper>
                     }
                   />
@@ -322,7 +324,7 @@ if(isDarkMode!=storedDarkMode){
                         isOpen={isOpen}
                         setActiveModalContent={setActiveModalContent}
                         setIsOpen={setIsOpen}
-                        page={pathname}      
+                        page={pathname}
                       />
                     }
                   />
@@ -332,7 +334,11 @@ if(isDarkMode!=storedDarkMode){
                       <ConditionalWrapper
                         condition={location.pathname === "/Home2Onepage"}
                       >
-                        <Home2 data={data}  page={pathname}       scrollToSection={scrollToSection}/>
+                        <Home2
+                          data={data}
+                          page={pathname}
+                          scrollToSection={scrollToSection}
+                        />
                       </ConditionalWrapper>
                     }
                   />
@@ -341,6 +347,8 @@ if(isDarkMode!=storedDarkMode){
                   isOpen={isOpen}
                   handleClose={handleClose}
                   modalContent={activeModalContent}
+                  sequence={activeModalsequence}
+                  data={data}
                 />
               </>
             </div>
