@@ -14,7 +14,7 @@ const HomeOnepage = ({
   DefaultHome,
   isOpen,
   setIsOpen,
-  setActiveModalContent,page
+  setActiveModalContent,page,setSequence
 }) => {
   return (
     <>
@@ -39,6 +39,7 @@ const HomeOnepage = ({
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           setActiveModalContent={setActiveModalContent}
+          setSequence={setSequence}
         />
       </ConditionalWrapper>
       <ConditionalWrapper condition={condition}>

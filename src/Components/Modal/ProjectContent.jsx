@@ -7,7 +7,7 @@ const ProjectContent = ({ sequence, data }) => {
   const singledata = data.projects.filter(
     (project) => project.sequence === sequence,
   );
-  console.log(singledata);
+  console.log(singledata,sequence);
   return (
     <div className="project-details-area">
       <div className="container">
@@ -15,7 +15,7 @@ const ProjectContent = ({ sequence, data }) => {
           <div className="row">
             <div className="col-lg-12">
               <div className="project-thumb">
-                <img src={singledata[0].image.url} alt="Thumb" />
+                <img src={singledata[0]?.image.url} alt="Thumb" />
               </div>
             </div>
             <div className="col-xl-12">
@@ -36,7 +36,7 @@ const ProjectContent = ({ sequence, data }) => {
                         </li>
                         <li>
                           <div className="info">
-                            <b>Techstack:</b> {singledata[0].techStack}
+                            <b>Techstack:</b> {singledata[0]?.techStack}
                           </div>
                         </li>
                         <li>
@@ -93,18 +93,18 @@ const ProjectContent = ({ sequence, data }) => {
                   </div>
                   <div className="col-lg-7">
                     <div className="thumb-grid">
-                      <img src={singledata[0].image.url} alt="Thumb" />
-                      <img src={singledata[0].image.url} alt="Thumb" />
+                      <img src={singledata[0]?.image.url} alt="Thumb" />
+                      <img src={singledata[0]?.image.url} alt="Thumb" />
                     </div>
                   </div>
                 </div>
-                <p>{singledata[0].description}</p>
+                <p>{singledata[0]?.description}</p>
                 <div className="row mt-50 mt-xs-30">
                   <div className="col-lg-6 col-md-6">
-                    <img src={singledata[0].image.url} alt="Thumb" />
+                    <img src={singledata[0]?.image.url} alt="Thumb" />
                   </div>
                   <div className="col-lg-6 col-md-6 mt-xs">
-                    <img src={singledata[0].image.url} alt="Thumb" />
+                    <img src={singledata[0]?.image.url} alt="Thumb" />
                   </div>
                 </div>
               </div>

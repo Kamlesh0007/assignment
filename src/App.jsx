@@ -267,6 +267,7 @@ function App() {
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
                         page={pathname}
+                        setSequence={setActiveModalsequence}
                       />
                     }
                   />
@@ -282,6 +283,7 @@ function App() {
                         setIsOpen={setIsOpen}
                         setActiveModalContent={setActiveModalContent}
                         page={pathname}
+                        setSequence={setActiveModalsequence}
                       />
                     }
                   />
@@ -325,6 +327,7 @@ function App() {
                         setActiveModalContent={setActiveModalContent}
                         setIsOpen={setIsOpen}
                         page={pathname}
+                        setSequence={setActiveModalsequence}
                       />
                     }
                   />
